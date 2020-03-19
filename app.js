@@ -35,6 +35,6 @@ app.get("/", function(req, res) {
 	res.render("list", { dayOfWeek: weekDay });
 });
 
-app.listen(3000, function() {
+app.listen(3001, function() {
 	console.log("App started on port 3000");
 });
