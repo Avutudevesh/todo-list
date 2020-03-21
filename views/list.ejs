@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Day of Week</title>
+        <title>ToDo List</title>
+        <link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
-		<% if(dayOfWeek === "Sunday") { %>
-		<h1>Today is <%= dayOfWeek %></h1>
-		<% } else { %>
-		<h1>I dont Know</h1>
-		<%} %>
+        <div class="box" id="heading">
+                <h1>My Schedule</h1>
+        </div>
+        <div class="box">
+            <% for(var i =0;i<todoItems.length;i++) {%>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%=  todoItems[i]  %></p>
+                </div>
+            <% } %>
+
+            <form class="item" action="/" method="post">
+                <input name="todoItem" type="text" autocomplete="off"/>
+                <button type="submit" name="button">+</button>
+            </form>
+        </div>
+	
 	</body>
 </html>
